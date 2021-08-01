@@ -512,6 +512,66 @@
   }
 }
 
+.search-partners {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+
+  @include md {
+    flex-direction: row;
+    max-width: 500px;
+    margin: auto;
+    padding: 0;
+  }
+
+  input {
+    background: $white;
+    border: 1px solid $input-border;
+    border-radius: 3px;
+    box-shadow: 0px 1px 2px rgba($black, 0.07);
+    color: $text-2;
+    flex: 1;
+    height: 40px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    max-width: 350px;
+    padding: 10px 15px;
+    transition: outline-color 0.3s ease-in-out;
+
+    @include md {
+      margin: 0;
+      width: auto;
+    }
+
+    &:focus {
+      outline-color: $primary;
+    }
+
+    &::-webkit-input-placeholder {
+      color: currentColor;
+    }
+
+    &:-ms-input-placeholder {
+      color: currentColor;
+    }
+
+    &::placeholder {
+      color: currentColor;
+    }
+  }
+
+  .button {
+    max-width: 350px;
+    width: 100%;
+
+    @include md {
+      margin-left: 10px;
+      width: 175px;
+    }
+  }
+}
+
 .footer {
   border-top: 2px solid $primary;
   margin-top: 40px;
