@@ -29,3 +29,15 @@ function loopSlider() {
     if (heroImages.length > 1) setTimeout(loopSlider, 4000);
   }
 }
+
+function searchPartners(e) {
+  var searchPartnersParams = document.getElementById(
+    'searchPartnersInput',
+  ).value;
+
+  console.log({ interest: searchPartnersParams });
+  e.preventDefault();
+}
+
+var searchPartnersForm = document.getElementById('searchPartnersForm');
+searchPartnersForm.addEventListener('submit', searchPartners);
