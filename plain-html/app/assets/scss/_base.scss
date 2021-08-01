@@ -1,0 +1,84 @@
+@import './reset';
+@import './fonts';
+
+$white: #ffffff;
+$black: #000000;
+$primary: #ff4e50;
+$text-1: #444444;
+$text-2: #666666;
+$text-3: #999999;
+$text-mute: #cccccc;
+$input-border: #d4d4d4;
+$alt-font: 'Roboto', sans-serif;
+
+@mixin sm {
+  @media screen and (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  // scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+input,
+textarea,
+select,
+button {
+  color: $text-1;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a,
+a:focus,
+a:hover {
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-transition: border-color ease-in-out 0.15s,
+    box-shadow ease-in-out 0.15s;
+  -moz-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+::-moz-selection {
+  background: $primary;
+  color: $white;
+  opacity: 1;
+  text-shadow: none;
+}
+
+::selection {
+  background: $primary;
+  color: $white;
+  opacity: 1;
+  text-shadow: none;
+}

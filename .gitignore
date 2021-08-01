@@ -1,0 +1,6 @@
+.vercel
+.build
+.node_modules
+yarn.lock
+.idea
+/plain-html/node_modules/
