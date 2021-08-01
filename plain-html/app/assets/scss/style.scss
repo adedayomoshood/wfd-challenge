@@ -438,6 +438,80 @@
   }
 }
 
+.activities {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+
+  @include md {
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__item {
+    border-radius: 4px;
+    color: $white;
+    cursor: pointer;
+    height: 120px;
+    position: relative;
+    margin: 0 auto;
+    max-width: 500px;
+    overflow: hidden;
+    width: 100%;
+
+    @include sm {
+      height: 175px;
+    }
+
+    @include md {
+      height: 310px;
+      max-width: none;
+
+      &.landscape {
+        grid-column-end: span 2;
+      }
+    }
+
+    &:hover {
+      img,
+      picture {
+        transform: scale(1.1);
+      }
+    }
+
+    img,
+    picture {
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.3s ease-in-out;
+      width: 100%;
+      z-index: 0;
+    }
+
+    figcaption {
+      align-items: center;
+      background: rgba(0, 0, 0, 0.2);
+      display: flex;
+      font-size: 22px;
+      font-weight: 700;
+      height: 100%;
+      justify-content: center;
+      left: 0;
+      line-height: 27px;
+      padding: 20px;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+
+      @include md {
+        height: 310px;
+      }
+    }
+  }
+}
+
 .footer {
   border-top: 2px solid $primary;
   margin-top: 40px;
