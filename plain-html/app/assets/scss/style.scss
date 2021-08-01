@@ -115,6 +115,45 @@
   }
 }
 
+.main-nav {
+  align-items: center;
+  color: $white;
+  display: flex;
+  margin: 0 auto;
+
+  @include md {
+    margin: 0;
+    margin-left: auto;
+  }
+
+  &__item {
+    border: 2px solid transparent;
+    color: $white;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 36px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      border-bottom-color: currentColor;
+    }
+
+    & ~ a {
+      margin-left: 20px;
+    }
+
+    &.highlighted {
+      border: 2px solid currentColor;
+      border-radius: 20px;
+      padding: 0 16px;
+
+      &:hover {
+        background: rgba($color: $primary, $alpha: 0.5);
+      }
+    }
+  }
+}
+
 .hero {
   background: $text-1;
   color: $white;
@@ -223,45 +262,181 @@
   }
 }
 
-.main-nav {
-  align-items: center;
-  color: $white;
-  display: flex;
-  margin: 0 auto;
+.how-it-works {
+  display: grid;
+  gap: 10px;
 
   @include md {
-    margin: 0;
-    margin-left: auto;
+    gap: 20px;
+
+    grid-template-columns: repeat(3, 1fr);
   }
 
   &__item {
-    border: 2px solid transparent;
+    border-radius: 4px;
     color: $white;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 36px;
-    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 240px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+    max-width: 500px;
+
+    @include md {
+      height: 400px;
+      max-width: none;
+    }
 
     &:hover {
-      border-bottom-color: currentColor;
-    }
-
-    & ~ a {
-      margin-left: 20px;
-    }
-
-    &.highlighted {
-      border: 2px solid currentColor;
-      border-radius: 20px;
-      padding: 0 16px;
-
-      &:hover {
-        background: rgba($color: $primary, $alpha: 0.5);
+      img {
+        transform: scale(1.1);
       }
+    }
+
+    &::before {
+      background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.0001) 0%,
+          rgba(0, 0, 0, 0.6) 100%
+      );
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+    }
+
+    img {
+      height: 100%;
+      left: 0;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      transition: all 0.3s ease-in-out;
+      z-index: 0;
+      width: 100%;
+    }
+
+    * {
+      z-index: 2;
+    }
+
+    .badge {
+      margin-bottom: 20px;
+    }
+
+    h4 {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 14px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-family: $alt-font;
+      font-size: 14px;
+      font-weight: 300;
     }
   }
 }
 
+.partners {
+  display: grid;
+  margin: 0 auto 40px;
+  padding: 0 10px;
+
+  @include md {
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 500px;
+  }
+
+  @include lg {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: none;
+  }
+
+  &__item {
+    margin: 0 auto 20px;
+    max-width: 250px;
+    width: 100%;
+    text-align: center;
+
+    figure {
+      border-radius: 60px;
+      overflow: hidden;
+      height: 120px;
+      width: 120px;
+
+      img {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
+    h4 {
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 17px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: $text-2;
+      font-family: $alt-font;
+      font-weight: 300;
+      font-size: 14px;
+    }
+  }
+
+  &__avatar {
+    display: inline-flex;
+    flex-direction: column;
+    margin: 0 auto 15px;
+  }
+
+  &__interest {
+    background: center no-repeat;
+    border: 3px solid $white;
+    border-radius: 20px;
+    display: block;
+    position: relative;
+    margin-top: -38px;
+    margin-left: auto;
+    height: 38px;
+    width: 38px;
+
+    &.art {
+      background-image: url('../images/interest-art.svg');
+    }
+
+    &.music {
+      background-image: url('../images/interest-music.svg');
+    }
+
+    &.photography {
+      background-image: url('../images/interest-photography.svg');
+    }
+
+    &.travel {
+      background-image: url('../images/interest-travel.svg');
+    }
+  }
+
+  .button {
+    display: block;
+    margin: 0 auto;
+    max-width: 350px;
+  }
+}
 
 .footer {
   border-top: 2px solid $primary;
