@@ -99,6 +99,7 @@
   background: $primary;
   padding: 20px 0;
   position: absolute;
+  top: 0;
   width: 100vw;
   z-index: 1;
 
@@ -150,6 +151,110 @@
       &:hover {
         background: rgba($color: $primary, $alpha: 0.5);
       }
+    }
+  }
+}
+
+
+.footer {
+  border-top: 2px solid $primary;
+  margin-top: 40px;
+  padding: 20px 0;
+
+  @include md {
+    margin-top: 105px;
+    padding: 40px 0;
+  }
+
+  .wrapper {
+    display: grid;
+
+    @include md {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .brand {
+    color: $primary;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+
+    @include md {
+      text-align: left;
+    }
+  }
+
+  &__col {
+    & ~ .footer__col {
+      margin-top: 15px;
+
+      @include md {
+        flex: 1;
+        margin: 0;
+      }
+    }
+
+    h5 {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      margin-bottom: 10px;
+      text-align: center;
+
+      @include md {
+        text-align: left;
+      }
+    }
+
+    h6 {
+      color: $text-2;
+      font-size: 10px;
+      font-weight: bold;
+      line-height: 12px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 300px;
+    margin: auto;
+
+    @include md {
+      flex-direction: column;
+      justify-content: left;
+    }
+
+    a {
+      color: $text-2;
+      display: inline-block;
+      font-family: $alt-font;
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 5px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      & ~ a {
+        margin-left: 10px;
+
+        @include md {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  &__vendor {
+    text-align: center;
+
+    @include md {
+      text-align: right;
     }
   }
 }
