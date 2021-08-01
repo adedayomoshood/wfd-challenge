@@ -23,3 +23,9 @@ if the website starts successfully, the terminal will print out the following
     [0] Ready for changes
 
 **HTML Website Dev URL:** `http://127.0.0.1:3770`
+
+## Lighthouse Report
+
+- Lighthouse Report for HTML Website - <a href="https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fdreamshare.vercel.app%2F" target="_blank" rel="noopener">View Full Report</a>
+
+  ![HTML Website Light House Report](../lighthouse-report__website.png 'Title')
