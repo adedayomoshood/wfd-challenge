@@ -1,0 +1,17 @@
+{
+  "name": "dreamshare",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Adedayo Moshood",
+  "license": "MIT",
+  "scripts": {
+    "css": "node-sass --watch ./app/assets/scss/ --output ./app/assets/css/ --output-style compressed",
+    "serve": "live-server app --port=3770",
+    "dev": "concurrently --kill-others 'yarn serve' 'yarn css'"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "live-server": "^1.2.1",
+    "node-sass": "^6.0.1"
+  }
+}
