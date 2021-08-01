@@ -147,6 +147,29 @@
       overflow: hidden;
       position: absolute;
       width: 100%;
+
+      &.none {
+        display: none;
+      }
+
+      * {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      &.active {
+        display: block;
+        opacity: 1;
+        left: 0;
+        transition: all 1s ease-in-out;
+      }
+
+      &.inactive {
+        display: block;
+        opacity: 0;
+        transition: all 1s ease-in-out;
+      }
     }
   }
 
