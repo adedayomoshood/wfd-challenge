@@ -1,7 +1,5 @@
 # Women First Digital Frontend Challenge
 
-This application is a simple react application built as a solution to the Archimydes Frontend coding challenge.
-
 This challenge is broken into two parts.
 
 - Build a responsive HTML Page using this [Figma Design](https://www.figma.com/file/Y9ozgdHUYURAMABTb21frP/dreamshare-website-template-areto?node-id=0%3A1).
