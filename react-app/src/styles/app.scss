@@ -72,6 +72,11 @@
     background: darken($color: $primary, $amount: 10%);
   }
 
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
   &-transparent {
     background: transparent;
     color: $primary;
@@ -80,6 +85,11 @@
     &:focus {
       background: $primary;
       color: $white;
+
+      &:disabled {
+        background: transparent;
+        color: $primary;
+      }
     }
   }
 }
@@ -92,7 +102,117 @@
   font-size: 12px;
   line-height: 20px;
   text-align: center;
-  width: 70px;
+  padding: 0 10px;
+}
+
+.notification {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.loader {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+
+  &-wrapper {
+    display: flex;
+    width: 100%;
+  }
+  div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: $primary;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+
+    &:nth-child(1) {
+      left: 8px;
+      animation: loader1 0.6s infinite;
+    }
+
+    &:nth-child(2) {
+      left: 8px;
+      animation: loader2 0.6s infinite;
+    }
+
+    &:nth-child(2) {
+      left: 8px;
+      animation: loader2 0.6s infinite;
+    }
+
+    &:nth-child(3) {
+      left: 32px;
+      animation: loader2 0.6s infinite;
+    }
+
+    &:nth-child(4) {
+      left: 56px;
+      animation: loader3 0.6s infinite;
+    }
+  }
+
+  @keyframes loader1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes loader3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes loader2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+}
+
+.skeleton {
+  &::after {
+    animation: shimmer 2s infinite;
+
+    background-image: linear-gradient(
+      90deg,
+      rgba(#fff, 0) 0,
+      rgba(#fff, 0.2) 20%,
+      rgba(#fff, 0.5) 60%,
+      rgba(#fff, 0)
+    );
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0.9;
+    position: absolute;
+    transform: translateX(-100%);
+
+    top: 0;
+    width: 100%;
+    z-index: 0;
+  }
+
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
 }
 
 .header {
@@ -262,9 +382,14 @@
   }
 }
 
-.how-it-works {
+.cat-breeds {
   display: grid;
   gap: 10px;
+  margin: 0 auto 40px;
+
+  &:empty {
+    margin: 0;
+  }
 
   @include md {
     gap: 20px;
@@ -274,6 +399,7 @@
 
   &__item {
     border-radius: 4px;
+    background: $text-3;
     color: $white;
     cursor: pointer;
     display: flex;

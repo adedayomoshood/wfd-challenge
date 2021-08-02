@@ -2,6 +2,7 @@ import React, { Suspense } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import Header from './components/Header.js';
 import Hero from './components/Hero.js';
+import Loader from './components/Loader.js';
 import './styles/app.scss';
 
 const SearchPartners = React.lazy(() =>
@@ -10,6 +11,8 @@ const SearchPartners = React.lazy(() =>
 const DiscoverActivities = React.lazy(() =>
   import('./components/DiscoverActivities.js'),
 );
+const CatBreeds = React.lazy(() => import('./components/CatBreeds.js'));
+
 const Footer = React.lazy(() => import('./components/Footer.js'));
 
 function App() {
@@ -18,10 +21,10 @@ function App() {
       <Header />
       <Hero />
 
-      <Suspense fallback={''}>
+      <Suspense fallback={<Loader />}>
         <main>
+          <CatBreeds />
           <DiscoverActivities />
-
           <SearchPartners />
         </main>
         <Footer />
