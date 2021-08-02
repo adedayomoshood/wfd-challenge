@@ -4,7 +4,7 @@ This challenge is to build a responsive HTML Page using <a href="https://www.fig
 
 ---
 
-## Links to completed challenge
+## Link to completed challenge
 
 - HTML Website - <a href="https://dreamshare.vercel.app" target="_blank" rel="noopener">https://dreamshare.vercel.app</a>
 
