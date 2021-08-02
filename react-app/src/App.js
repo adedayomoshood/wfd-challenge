@@ -7,6 +7,9 @@ import './styles/app.scss';
 const SearchPartners = React.lazy(() =>
   import('./components/SearchPartners.js'),
 );
+const DiscoverActivities = React.lazy(() =>
+  import('./components/DiscoverActivities.js'),
+);
 const Footer = React.lazy(() => import('./components/Footer.js'));
 
 function App() {
@@ -17,6 +20,8 @@ function App() {
 
       <Suspense fallback={''}>
         <main>
+          <DiscoverActivities />
+
           <SearchPartners />
         </main>
         <Footer />
