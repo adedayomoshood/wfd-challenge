@@ -61,4 +61,8 @@ if the react-app starts successfully, the terminal will print out the following
 
 - Lighthouse Report for HTML Website - <a href="https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fdreamshare.vercel.app%2F" target="_blank" rel="noopener">View Full Report</a>
 
-  ![HTML Website Light House Report](lighthouse-report__website.png 'Title')
+  ![HTML Website Light House Report](lighthouse-report__website.png 'HTML Website Lighthouse Report')
+
+- Lighthouse Report for React App - <a href="https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fdreamshare-react.vercel.app%2F" target="_blank" rel="noopener">View Full Report</a>
+
+  ![React App Light House Report](lighthouse-report__react.png 'React App Lighthouse Report')

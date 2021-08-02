@@ -29,4 +29,10 @@ if the app starts successfully, the terminal will print out the following
     Note that the development build is not optimized.
     To create a production build, use yarn build.
 
-**HTML Website Dev URL:** `http://localhost:3700`
+**React App URL:** `http://localhost:3700`
+
+## Lighthouse Report
+
+![React App Light House Report](../lighthouse-report__react.png 'Title')
+
+<a href="https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fdreamshare-react.vercel.app%2F" target="_blank" rel="noopener">View Full Report</a>

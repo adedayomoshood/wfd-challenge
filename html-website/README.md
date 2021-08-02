@@ -26,6 +26,6 @@ if the website starts successfully, the terminal will print out the following
 
 ## Lighthouse Report
 
-- Lighthouse Report for HTML Website - <a href="https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fdreamshare.vercel.app%2F" target="_blank" rel="noopener">View Full Report</a>
+![HTML Website Light House Report](../lighthouse-report__website.png 'Title')
 
-  ![HTML Website Light House Report](../lighthouse-report__website.png 'Title')
+<a href="https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fdreamshare.vercel.app%2F" target="_blank" rel="noopener">View Full Report</a>
